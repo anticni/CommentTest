@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+    <html>
+
+    <head>
+        <title>Comments</title>
+    </head>
+
+    <body>
+        <table>
+            <tr>
+                <th>Comment</th>
+                <th>Date</th>
+            </tr>
+            {% for key, value in comms.iteritems() %}
+         
+            <tr>
+               <td> {{ key }} </td>
+               <td> {{ ''.join(value) }} </td>
+            </tr>
+            
+         {% endfor %}
+
+
+        </table>
+            
+        
+    </body>
+
+    </html>
