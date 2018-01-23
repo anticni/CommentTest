@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+    <html>
+
+    <head>
+        <title>Test</title>
+    </head>
+
+    <body>
+        <form action="http://127.0.0.1:5000/comments" target="responseFrame" method="get" onsubmit="updateFrame()">
+        <input type="submit" value="TABLE" name="comments">
+        </form>
+        <form action="http://127.0.0.1:5000/api/v1.0/comments" target="responseFrame" method="get" onsubmit="updateFrame()">
+        <input type="submit" name="JSON" value="JSON">
+        </form>
+        <form action="http://127.0.0.1:5000/index" target="responseFrame" method="get" onsubmit="updateFrame()">
+        <input type="submit" name="Welcome!" value="Welcome!">
+        </form>
+    <iframe id="frame" name="responseFrame" style="display: none;"></iframe>
+    <script type="text/javascript">
+    const frame = document.getElementById('frame')
+
+    function updateFrame() {
+        frame.style = "display: block;"
+    }
+    </script> 
+        
+    </body>
+
+    </html>
